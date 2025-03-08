@@ -18,25 +18,49 @@
         }
 
         body {
-            background: #161617;
+            background: whitesmoke;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
+        .link-to-portfolio-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .link-to-portfolio {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
-            font-size: 24px;
+            padding: 1rem 1.5rem;
+            font-size: 20px;
             line-height: 24px;
-            font-weight: 400;
-            letter-spacing: -0.33px;
-            color: rgb(48, 148, 255);
+            font-weight: 600;
+            letter-spacing: -0.0125em;
+            color: white;
+            background: rgb(40, 134, 255);
+            border: 1px solid rgb(0, 90, 206);
+            border-radius: 12px;
+            box-shadow: 0px 4px 0px 0px #175bb3, 2px 2px 5px 0px #015cd080 inset;
             font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .link-to-portfolio:hover {
-            text-decoration: underline;
+            box-shadow: 0px 6px 0px 0px #175bb3, 2px 2px 5px 0px #015cd080 inset;
+            transform: translateY(-2px);
+        }
+
+        .link-to-portfolio:active {
+            box-shadow: 0px 0px 0px 0px #175bb3, 2px 2px 5px 0px #015cd080 inset;
+            transform: translateY(6px);
+            outline: none;
         }
     </style>
 
@@ -44,7 +68,8 @@
 
 <body>
     <div class="link-to-portfolio-wrapper">
-        <a href="https://rajkumxr.github.io/work/" class="link-to-portfolio" target="_blank">Link to portfolio ↗</a>
+        <a href="https://rajkumxr.github.io/work/" class="link-to-portfolio" target="_blank" role="button"
+            aria-label="link to portfolio">See portfolio</a>
     </div>
 </body>
 
